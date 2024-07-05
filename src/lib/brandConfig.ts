@@ -6,5 +6,8 @@ export const brandConfig = {
     seo: {
         category: "Music Player"
     },
-    url: process.env.NEXT_PUBLIC_VERCEL_URL ?? 'http://localhost:3000/',
+    url:
+        process.env.NEXT_PUBLIC_BASE_URL ?? // * Production URL
+        process.env.NEXT_PUBLIC_VERCEL_URL ?? // * Vercel Auto URL
+        'http://localhost:3000/', // * Dev
 }

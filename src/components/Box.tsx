@@ -1,15 +1,14 @@
-import { cn } from "@/lib/utils";
-import React from "react";
+import { cn } from '@/lib/utils';
+import { PropsWithChildren } from 'react';
 
-interface BoxProps {
-  children: React.ReactNode;
+interface BoxProps extends PropsWithChildren {
   className?: string;
 }
 
 const Box = ({ children, className }: BoxProps) => {
   return (
     <div
-      className={cn("bg-neutral-900 rounded-lg h-fit w-full", className)}
+      className={cn(`bg-neutral-900 rounded-lg h-fit w-full`, className)}
     >
       {children}
     </div>
